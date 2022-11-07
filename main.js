@@ -53,12 +53,15 @@ function resetColors() {
         }
         
     if (easyBtn.classList.contains('selected')) {
+
         easyOne = newArr.slice(0, 3)
         console.log(easyOne)
         pickedColor = easyOne[Math.ceil(Math.random() * (easyOne.length - 1))]
+
     } else {
     
         pickedColor = newArr[Math.ceil(Math.random() * (newArr.length - 1))]
+        
     }
 
     colorDisplay.innerHTML = pickedColor
@@ -122,7 +125,6 @@ reset.addEventListener('click', () => {
         newArr.push(cuadro[i].style.backgroundColor)
         
     }
-
     
     reset.innerHTML = 'Nuevos Colores'
     h1.style.backgroundColor = '#F7ACCF'
@@ -140,17 +142,11 @@ easyBtn.addEventListener('click', () => {
     for (let i = 0; i < cuadro.length; i++) {
         
 
-        if (i < 3) {
-        newArr.push(cuadro[i].style.backgroundColor)
-    }
+        if (i < 3) { newArr.push(cuadro[i].style.backgroundColor) }
 
-        if (i >= 3) {
-            
-          cuadro[i].style.display = "none";
-        }
+        else if (i >= 3) { cuadro[i].style.display = "none" }
         
     }
-   
 
 })
 
@@ -167,6 +163,5 @@ hardBtn.addEventListener('click', () => {
         
     }
     resetColors()
-    
 
 })

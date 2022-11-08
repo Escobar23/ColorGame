@@ -66,7 +66,7 @@ function resetColors() {
 
     colorDisplay.innerHTML = pickedColor
    
-    setTimeout(colorH1, 2000)
+    
 
 }
 
@@ -101,8 +101,8 @@ for (let i = 0; i < cuadro.length; i++) {
             spanMsm.innerHTML = '¡Correcto!'
             h1.style.backgroundColor = clickedColor
             reset.innerHTML = 'Play Again?'
-            resetColors()
-
+            changeColors(clickedColor)
+            party.confetti(div);
         }
         
     }); 

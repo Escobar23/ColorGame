@@ -55,7 +55,6 @@ function resetColors() {
     if (easyBtn.classList.contains('selected')) {
 
         easyOne = newArr.slice(0, 3)
-        console.log(easyOne)
         pickedColor = easyOne[Math.ceil(Math.random() * (easyOne.length - 1))]
 
     } else {
@@ -65,8 +64,6 @@ function resetColors() {
     }
 
     colorDisplay.innerHTML = pickedColor
-   
-    
 
 }
 
@@ -121,7 +118,6 @@ reset.addEventListener('click', () => {
     
     for (let i = 0; i < cuadro.length; i++) {
        
-
         newArr.push(cuadro[i].style.backgroundColor)
         
     }

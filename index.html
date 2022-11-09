@@ -10,39 +10,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
 
-    <h1>
+    <h1 class="m-0 p-5">
       The Great
       <span id="colorDisplay"> <!-- El codigo RGB del color ganador --></span>
       Guessing Game
     </h1>
 
-    <div id="stripe">
-      <div>
-        <button class="btn" id="easyButton">Easy</button>
-        <button class="selected btn" id="hardButton">Hard</button>
+    <div id="stripe" class="d-flex justify-content-around row fs-3 py-3  my-xs-5">
+      <div class="col-xs-6">
+        <button class="betn" id="easyButton">Easy</button>
+        <button class="selected betn" id="hardButton">Hard</button>
       </div>
       
-      <span id="message">
+      <span id="message" class="col-xs-6">
         <!-- Aquí va el mensaje de intentalo nuevamente o correcto -->
       </span>
-      <button class="btn reset" id="reset">Nuevos Colores</button>
+      <button class="betn reset col-xs-6" id="reset">Nuevos Colores</button>
     </div>
     
 
-    <div class="container">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
+    <div class="container-fluid d-flex justify-content-center py-5 pt-xs-5 my-xs-5 my-md-4 my-lg-5 row">
+      <div class="square col-lg-3 col-md-4 col-xs-auto m-2"></div>
+      <div class="square col-lg-3 col-md-4 col-xs-auto m-2"></div>
+      <div class="square col-lg-3 col-md-4  col-xs-auto m-2"></div>
+      <div class="square col-lg-3 col-md-4  col-xs-auto m-2"></div>
+      <div class="square col-lg-3 col-md-4  col-xs-auto m-2"></div>
+      <div class="square col-lg-3 col-md-4  col-xs-auto m-2"></div>
     </div>
     
   </body>
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-  <!-- <script src="trash.js"></script> -->
 </html>

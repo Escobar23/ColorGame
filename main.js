@@ -90,12 +90,12 @@ for (let i = 0; i < cuadro.length; i++) {
         if (clickedColor !== pickedColor) {
 
             changeColors(clickedColor)
-            div.style.backgroundColor = '#1d142e'
+            div.style.backgroundColor = 'white'
             spanMsm.innerHTML = '¡Intentalo Nuevamente!'
             
         } else {
 
-            spanMsm.innerHTML = '¡Correcto!'
+            spanMsm.innerHTML = '¡Correcto!'        
             h1.style.backgroundColor = clickedColor
             reset.innerHTML = 'Play Again?'
             changeColors(clickedColor)

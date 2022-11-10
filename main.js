@@ -11,6 +11,7 @@ const colors = [
     'rgb(212, 81, 19)', //naranja amarronado
     'rgb(62, 195, 0)' //verde
 ]
+
 let cuadro = document.querySelectorAll('.square'),
     colorDisplay = document.querySelector('#colorDisplay'),
     pickedColor = ''
@@ -67,9 +68,6 @@ function resetColors() {
 
 }
 
-
-
-
 function changeColors(color) {
     
     for (let i = 0; i < cuadro.length; i++) {
@@ -113,18 +111,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 })
  
 reset.addEventListener('click', () => {
-    let newArr = []
     resetColors()
-    
-    for (let i = 0; i < cuadro.length; i++) {
-       
-        newArr.push(cuadro[i].style.backgroundColor)
-        
-    }
-    
-    reset.innerHTML = 'Nuevos Colores'
-    h1.style.backgroundColor = '#F7ACCF'
-    spanMsm.innerHTML = ''
 
 })
 
@@ -132,12 +119,10 @@ easyBtn.addEventListener('click', () => {
 
     hardBtn.classList.remove("selected")
     easyBtn.classList.add('selected')
-    let newArr = []
     resetColors()
 
     for (let i = 0; i < cuadro.length; i++) {
         
-
         if (i < 3) { newArr.push(cuadro[i].style.backgroundColor) }
 
         else if (i >= 3) { cuadro[i].style.display = "none" }

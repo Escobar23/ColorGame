@@ -4,6 +4,10 @@
   background-color: burlywood;
 }
 
+.cont{
+  margin: 0 10%;
+}
+
 .container {
   max-width: 600px;
 }

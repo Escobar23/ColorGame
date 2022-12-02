@@ -23,17 +23,11 @@ let cuadro = document.querySelectorAll('.square'),
 let hardBtn = document.querySelector('#hardButton'),
     randomColors = [];
 
-function colorH1() {
-     if (h1.style.backgroundColor !== '#F7ACCF') {
-        h1.style.backgroundColor = '#F7ACCF'
-    }
-    spanMsm.innerHTML = ''
-}
 
 function resetColors() {
+
     let newArr = [],
         easyOne = []
-    
 
     for (let i = 0; i < cuadro.length; i++) {
 
@@ -79,6 +73,7 @@ function changeColors(color) {
 }
 
 for (let i = 0; i < cuadro.length; i++) {
+
     cuadro[i].addEventListener('click', function (e) {
         
         let div = e.target,
@@ -87,7 +82,6 @@ for (let i = 0; i < cuadro.length; i++) {
         
         if (clickedColor !== pickedColor) {
 
-            changeColors(clickedColor)
             div.style.backgroundColor = 'white'
             spanMsm.innerHTML = '¡Intentalo Nuevamente!'
             
@@ -98,9 +92,11 @@ for (let i = 0; i < cuadro.length; i++) {
             reset.innerHTML = 'Play Again?'
             changeColors(clickedColor)
             party.confetti(div);
+
         }
         
     }); 
+
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
@@ -111,7 +107,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
 })
  
 reset.addEventListener('click', () => {
+
     resetColors()
+    h1.style.backgroundColor = '#F7ACCF'
 
 })
 
@@ -120,6 +118,7 @@ easyBtn.addEventListener('click', () => {
     hardBtn.classList.remove("selected")
     easyBtn.classList.add('selected')
     resetColors()
+    let newArr = [];
 
     for (let i = 0; i < cuadro.length; i++) {
         
@@ -143,6 +142,7 @@ hardBtn.addEventListener('click', () => {
         if (i >= 3) { cuadro[i].style.display = "block" }
         
     }
+    
     resetColors()
 
 })
